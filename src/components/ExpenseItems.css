@@ -1,0 +1,15 @@
+.mainCointainer{
+    display: flex;
+}
+.date{
+    color: red;
+}
+
+.car_insuranse{
+    color: blue;
+}
+
+.price{
+    background-color: green;
+    color: white;
+}
