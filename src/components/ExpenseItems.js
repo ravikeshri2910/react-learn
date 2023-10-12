@@ -1,6 +1,6 @@
 import './ExpenseItems.css'
 
-function ExpenseItem(){
+function ExpenseItem(props){
 
     const expenseDate = new Date(2021, 2, 28)
     const expenseTitle = 'Car Insurance'
@@ -11,11 +11,11 @@ function ExpenseItem(){
     return (
     <div className='mainCointainer'>
         <h3>ExpenseItem!</h3>
-        <div className='date'>{expenseDate.toISOString()}</div>
+        <div className='date'>{props.date.toISOString()}</div>
         <div className='car_insuranse'>
-            <h2>{expenseTitle}</h2>
-            <h2>{expenseLocation}</h2>
-            <div className='price'>${expensePrice}</div>
+            <h2>{props.title}</h2>
+            <h2>{props.location}</h2>
+            <div className='price'>${props.amount}</div>
         </div>
     </div>
     )
