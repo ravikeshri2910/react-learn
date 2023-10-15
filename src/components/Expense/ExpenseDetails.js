@@ -8,6 +8,7 @@ function ExpenseDetails(props) {
             <h2>{props.location}</h2>
             <div className='price'>${props.amount}</div>
         </div>
+        
     )
 
 

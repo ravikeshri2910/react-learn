@@ -1,18 +1,14 @@
-.mainCointainer{
+/* .mainCointainer{
     display: flex;
-}
+    border: 2px solid black;
+} */
 .date{
     color: red;
 }
 
-.car_insuranse{
-    color: blue;
-}
+
 
 .price{
     background-color: green;
     color: white;
-}
-.month{
-    border: 2px solid red;
 }
