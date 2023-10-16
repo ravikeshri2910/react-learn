@@ -1,0 +1,7 @@
+.form{
+    border : 2px solid rgb(131, 121, 121);
+    border-radius: 2%;
+    height: 270px;
+    width: 400px;
+    display: grid;
+}
