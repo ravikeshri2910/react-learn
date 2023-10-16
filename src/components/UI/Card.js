@@ -6,7 +6,7 @@ const Card=(props) =>{
 
     return (<div className= {classes}> {props.children} </div>)
 
-    // peops.children is use to get new element in consimised div
+    // props.children is use to get new element in consimised div
 }
 
 export default Card

@@ -34,12 +34,15 @@ function App() {
       <h2>Let's get started!</h2>
       <div>
         {expense.map((expense, index) => (
-          <ExpenseItem
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-            location={expense.location}
-          ></ExpenseItem>
+          <div className="details">
+            <ExpenseItem
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+              location={expense.location}
+            ></ExpenseItem>
+          
+          </div>
         ))}
 
       </div>
