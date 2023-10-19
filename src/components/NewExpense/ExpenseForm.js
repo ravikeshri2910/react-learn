@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const [title, setTitle] = useState('')
     const [amount, setAmount] = useState('')
@@ -18,17 +18,6 @@ const ExpenseForm = () => {
 
     // })
 
-    const submitHandler = (event)=>{
-        event.preventDefault()
-        const expense = {
-            title : title,
-            amount : amount,
-            date : new Date(date),
-            location : location
-        }
-
-        console.log(expense)
-    }
 
     const titleHandler =(event) =>{
         setTitle(event.target.value)
@@ -57,6 +46,24 @@ const ExpenseForm = () => {
         console.log(event.target.value)
     }
 
+    const submitHandler = (event)=>{
+        event.preventDefault()
+        const expense = {
+            title : title,
+            amount : amount,
+            date : new Date(date),
+            location : location
+        }
+
+        props.onSaveExpenseData(expense)
+
+        setTitle('')
+        setAmount('')
+        setDate('')
+        setLocation('')
+
+        console.log(expense)
+    }
     
 
     return (
@@ -65,16 +72,16 @@ const ExpenseForm = () => {
                 <h3>Enter Expense</h3>
 
                 <label>Title</label>
-                <input onChange={titleHandler} placeholder='Enter Title'></input>
+                <input value = {title} onChange={titleHandler} placeholder='Enter Title'></input>
 
                 <label>Amount</label>
-                <input type='number'  onChange={amountHandler} placeholder='Enter Amount'></input>
+                <input type='number' value={amount}  onChange={amountHandler} placeholder='Enter Amount'></input>
 
                 <label>Date</label>
-                <input onChange={dateHandler}  type='date' placeholder='Enter Date'></input>
+                <input value={date} onChange={dateHandler}  type='date' placeholder='Enter Date'></input>
 
                 <label>location</label>
-                <input onChange={locationHandler}  placeholder='Enter Location'></input>
+                <input value={location} onChange={locationHandler}  placeholder='Enter Location'></input>
 
                 <button >Submit</button>
             </form>

@@ -30,10 +30,16 @@ function App() {
     },
   ]
 
+  const addExpenseHAndler = (expenseData) => {
+    console.log('App js')
+    console.log(expenseData)
+
+  }
+
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense/>
+      <NewExpense onAddExpense = {addExpenseHAndler}/>
       <div>
         {expense.map((expense, index) => (
           <div className="details">
