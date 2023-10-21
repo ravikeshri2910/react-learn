@@ -12,28 +12,28 @@ const DUMMY_EXPENSE = [
     id : 'e1',
     title: 'Car Insuranse',
     amount: '28',
-    date: new Date(2021, 2, 28),
+    date: new Date(2022, 2, 28),
     location: 'Delhi'
   },
   {
     id : 'e2',
     title: 'Food',
     amount: '65',
-    date: new Date(2021, 3, 28),
+    date: new Date(2023, 3, 28),
     location: 'Mumbai'
   },
   {
     id : 'e3',
     title: 'Hotel',
     amount: '10',
-    date: new Date(2021, 3, 30),
+    date: new Date(2020, 3, 30),
     location: 'Goa'
   },
   {
     id : 'e4',
     title: 'Travel',
     amount: '20',
-    date: new Date(2021, 4, 27),
+    date: new Date(2022, 4, 27),
     location: 'Assam'
   },
 ]

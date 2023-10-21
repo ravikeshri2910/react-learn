@@ -1,10 +1,16 @@
 .month{
     color: black;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    /* border-radius: 25px; */
 }
 .day{
     color: blue;
 }
 .year{
     color: blueviolet;
+}
+.date{
+    /* border: 2px solid yellow; */
+    margin-left: 5px;
+    width: 15%;
 }

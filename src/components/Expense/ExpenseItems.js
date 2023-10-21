@@ -15,7 +15,7 @@ function ExpenseItem(props) {
     return (
         <Card>
             
-            <h3>ExpenseItem!</h3>
+            {/* <h3>ExpenseItem!</h3> */}
             <ExpenseDate date={props.date} />
             <ExpenseDetails title={props.title} amount={props.amount} location={props.location} />
             <button onClick={deleteHandler}>Delete</button>
