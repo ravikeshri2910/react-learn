@@ -4,9 +4,13 @@ import './ExpenseDetails.css'
 
 function ExpenseDetails(props) {
     const [amount, setAmount] = useState(props.amount)
-    const amountHandler = () =>{
+
+    // console.log('amount',amount)
+
+    const amountHandler = () => {
         setAmount(100)
     }
+    
     return (
         <div className='car_insuranse'>
             <h2>{props.title}</h2>
@@ -14,7 +18,7 @@ function ExpenseDetails(props) {
             <div className='price'>${amount}</div>
             <button onClick={amountHandler}>Amount Update</button>
         </div>
-        
+
     )
 
 
