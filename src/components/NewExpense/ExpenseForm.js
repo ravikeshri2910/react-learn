@@ -63,7 +63,28 @@ const ExpenseForm = (props) => {
         setLocation('')
 
         console.log(expense)
+
+        let state = false;
+        props.onCancelButton(state)
+        console.log(state)
     }
+
+    const cancelHandler = (event) => {
+        event.preventDefault()
+        let state = false;
+        props.onCancelButton(state)
+        
+    }
+
+    const submitButtonHandler = (event) => {
+        event.preventDefault()
+        let state = false;
+        console.log(state)
+        // props.onCancelButton(state)
+        
+    }
+
+
     
 
     return (
@@ -83,7 +104,9 @@ const ExpenseForm = (props) => {
                 <label>location</label>
                 <input value={location} onChange={locationHandler}  placeholder='Enter Location'></input>
 
-                <button >Submit</button>
+                <button>Submit</button>
+                <button onClick = {cancelHandler}>Cancel</button>
+        
             </form>
         </div>
     )

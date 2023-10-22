@@ -5,6 +5,7 @@ import ExpenseFilter from "./components/Expense/ExpenseFilter";
 import ExpenseItem from "./components/Expense/ExpenseItems";
 import Expenses from "./components/Expense/Expenses";
 import NewExpense from './components/NewExpense/NewExpense'
+import AddExpenseButton from "./components/NewExpense/AddExpenseButton";
 
 
 const DUMMY_EXPENSE = [
@@ -41,6 +42,7 @@ const DUMMY_EXPENSE = [
 function App() {
 
   const [expenses , setExpenses] = useState(DUMMY_EXPENSE)
+  const [AddExpense , setAddExpense] = useState(false)
 
   const addExpenseHAndler = (expenseData) => {
 
@@ -51,10 +53,29 @@ function App() {
     })
   }
 
+  const expenseState = (state) =>{
+    setAddExpense(state)
+  }
+
+  const cancelFormHandler = (state) =>{
+    setAddExpense(state)
+  }
+
+  // console.log('AddExpense'+AddExpense)
+
+  let form = <AddExpenseButton clicked = {expenseState}/>
+
+  if (AddExpense === true){
+    form = <NewExpense onAddExpense = {addExpenseHAndler} onCancel = {cancelFormHandler}/> // {/*form*/}
+  }
+
+
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense onAddExpense = {addExpenseHAndler}/>  {/*form*/}
+    
+      {form}
+
       <Expenses items = {expenses} /> {/*deltais of expenses*/}
     </div>
   );

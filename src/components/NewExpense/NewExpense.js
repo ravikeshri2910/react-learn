@@ -17,11 +17,18 @@ function NewExpense(props){
         // console.log(expenseData)
     }
 
+    const cancelHandler = (state) =>{
+
+        props.onCancel(state)
+    }
+
+
+
 
 
     return (
         <div>
-            <ExpenseForm onSaveExpenseData = {saveExpenseDataHandler}/>
+            <ExpenseForm onCancelButton = {cancelHandler} onSaveExpenseData = {saveExpenseDataHandler}/>
         </div>
     )
 }
