@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 import './ExpenseItems.css'
 import ExpenseDate from './ExpenseDate'

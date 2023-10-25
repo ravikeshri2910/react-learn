@@ -76,13 +76,7 @@ const ExpenseForm = (props) => {
         
     }
 
-    const submitButtonHandler = (event) => {
-        event.preventDefault()
-        let state = false;
-        console.log(state)
-        // props.onCancelButton(state)
-        
-    }
+    
 
 
     

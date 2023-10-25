@@ -8,7 +8,8 @@ function AddExpenseButton(props){
 
     const AddExpense = () =>{
         console.log('here')
-        props.clicked(true)
+        let d = true
+        props.clicked(d)
     }
 
     return(
